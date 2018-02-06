@@ -1,13 +1,14 @@
 require(lme4)
 library(ggplot2)
 library(plyr)
-library(dplyr)
 library(stringr)
 library(eyetrackingR)
 library (pbapply)
 library(effsize)
 library(lmerTest)
 devtools::install_github("jwdink/eyetrackingR") ##newest version of eyetrackingR for bug fixes
+install.packages('versions')
+versions::install.versions('dplyr',versions = '0.5.0')
 
 setwd("") ## change acording to directory where file is
 data<- read.table("Results.txt", header = TRUE) #change to fit name of your txt file
